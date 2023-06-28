@@ -1,0 +1,34 @@
+{
+    "scene": {
+        "type": "union",
+        "children": [             
+            {
+                "type": "difference",
+                "a": {
+                    "type": "sphere",
+                    "radius": 200,
+                    "center": {"x": -50, "y": 350, "z": 0},
+                    "material": {"type": "textured", "texture": "earth.jpg", "reflectiveness": 0.2}
+                },
+                "b": {
+                    "type": "sphere",
+                    "radius": 125,
+                    "center": {"x": -50, "y": 250, "z": 0},
+                    "material": {"color": {"r": 150, "g": 150, "b": 150}, "reflectiveness": 0.9}
+                }
+            },
+            {
+                "type": "sphere",
+                "radius": 80,
+                "center": {"x": -50, "y": 350, "z": 0},
+                "material": {"type": "textured", "texture": "lava.jpg", "reflectiveness": 0.15}
+            }
+        ]
+        },
+        "reflections": 50,
+        "lighting": {"type": "phong", "ambient": {"color": 128}, "shadows": true,
+                    "lights": [{"position": {"x": -50, "y": -700, "z": 30}, "color": {"r": 255, "g": 0, "b": 0}},
+                               {"position": {"x": 50, "y": -700, "z": 30}, "color": {"r": 0, "g": 255, "b": 0}},
+                               {"position": {"x": 0, "y": -700, "z": -60}, "color": {"r": 0, "g": 0, "b": 255}}]
+    }
+}
